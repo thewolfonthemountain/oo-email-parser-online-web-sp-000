@@ -13,8 +13,8 @@ def initialize(emails)
 end
 
 def parse
-    email_array = @emails.split(/[(\s|,]/).reject{ |e| e.empty? | email_array.include?(e) }
-    email_array
+    email_array = @emails.split(/[(\s|,]/).reject{ |e| e.empty? }
+    email_array.uniq
 end
 
 end
