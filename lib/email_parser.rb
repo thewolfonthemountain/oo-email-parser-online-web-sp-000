@@ -13,7 +13,7 @@ def initialize(emails)
 end
 
 def parse
-    email_array = @emails.split(/[(\s|,]/).delete_if(&:blank?)
+    email_array = @emails.split(/[(\s|,]/).reject{ |e| e.empty? }
     email_array
 end
 
